@@ -57,7 +57,7 @@ export const DefaultEffects: IEffects;
 export const DefaultFontStyles: IFontStyles;
 
 // @public (undocumented)
-export const DefaultPalette: IPalette;
+export const DefaultPalette: any;
 
 // Warning: (ae-incompatible-release-tags) The symbol "DefaultSpacing" is marked as @public, but its signature references "ISpacing" which is marked as @internal
 //
