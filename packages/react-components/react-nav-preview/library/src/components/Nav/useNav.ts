@@ -73,7 +73,7 @@ export const useNav_unstable = (props: NavProps, ref: React.Ref<HTMLDivElement>)
   const [openCategories, setOpenCategories] = useControllableState({
     state: controlledOpenCategoryItems,
     defaultState: initializeUncontrolledOpenCategories({ defaultOpenCategories, multiple }),
-    initialState: undefined,
+    initialState: [],
   });
 
   const [selectedCategoryValue, setSelectedCategoryValue] = useControllableState({
@@ -155,9 +155,9 @@ export const useNav_unstable = (props: NavProps, ref: React.Ref<HTMLDivElement>)
       }),
       { elementType: 'div' },
     ),
-    openCategories: openCategories && openCategories.length > 0 ? openCategories : [],
+    openCategories,
     selectedValue,
-    selectedCategoryValue: controlledSelectedCategoryValue ?? selectedCategoryValue,
+    selectedCategoryValue,
     onRegister,
     onUnregister,
     onSelect,
